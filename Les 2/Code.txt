@@ -1,0 +1,45 @@
+#include <Wire.h>
+int LED = 13;
+int x = 0;
+void setup() {
+
+pinMode (LED, OUTPUT);
+
+Wire.begin(9);
+
+Wire.onReceive(receiveEvent);
+}
+void receiveEvent(int bytes) {
+x = Wire.read(); // read one character from the I2C
+}
+void loop() {
+
+if (x == 0) {
+digitalWrite(LED, HIGH);
+delay(200);
+digitalWrite(LED, LOW);
+delay(200);
+}
+
+if (x == 3) {
+digitalWrite(LED, HIGH);
+delay(1000);
+digitalWrite(LED, LOW);
+delay(1000);
+}
+}
+dat is de slave
+#include<Wire.h>
+int x = 0;
+void setup() {
+
+Wire.begin();
+}
+void loop() {
+Wire.beginTransmission(9);
+Wire.write(x);
+Wire.endTransmission();
+x++; // Increment x
+if (x > 5) x = 0; // `reset x once it gets 6
+delay(1000);
+}
