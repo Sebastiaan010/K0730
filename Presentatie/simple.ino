@@ -15,34 +15,34 @@ void setup() {
 	randomSeed(analogRead(0));
 }
 void loop() {
-	randNumber = random(1, 4);
-	if(randNumber == 1){
-		digitalWrite(Led1, HIGH);
+	randNumber = random(1, 4); // Hier word het nummer gegenereert.
+	if(randNumber == 1){ // Check of het nummer overeen komt.
+		digitalWrite(Led1, HIGH); // komt het overeen word dit uitgevoerd.
 	} else {
 		digitalWrite(Led1, LOW);		
 	}
-	delay(500);	
+	delay(500);	  // halve seconden pauze
 	
-	if(randNumber == 2){
-		digitalWrite(Led2, HIGH);
+	if(randNumber == 2){ // Check of het nummer overeen komt.
+		digitalWrite(Led2, HIGH); // komt het overeen word dit uitgevoerd.
 	} else {
 		digitalWrite(Led2, LOW);		
 	}
-	delay(500);
+	delay(500);  // halve seconden pauze
 	
-	if(randNumber == 3){
-		digitalWrite(Led3, HIGH);
+	if(randNumber == 3){ // Check of het nummer overeen komt.
+		digitalWrite(Led3, HIGH);	// komt het overeen word dit uitgevoerd.	
 	} else {
 		digitalWrite(Led3, LOW);		
 	}
-	delay(500);
+	delay(500); // halve seconden pauze
 	
-	if(randNumber == 4){
-		digitalWrite(Led4, HIGH);
+	if(randNumber == 4){ // Check of het nummer overeen komt.
+		digitalWrite(Led4, HIGH);// komt het overeen word dit uitgevoerd.
 	} else {
 		digitalWrite(Led4, LOW);		
 	}
-	delay(500);
+	delay(500);  // halve seconden pauze
 }
 
 
